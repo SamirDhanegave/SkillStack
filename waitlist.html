@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waitlist Section</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS for animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Custom CSS -->
+  <style>
+    /* Disable horizontal scroll */
+    html, body {
+      overflow-x: hidden;
+    }
+
+    /* Custom floating blob animations */
+    @keyframes floatBlob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .animate-float {
+      animation: floatBlob 6s ease-in-out infinite;
+    }
+
+    /* Form focus outline */
+    input:focus, button:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Indigo */
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden font-sans">
+
+  <!-- WAITLIST SECTION -->
+  <section class="relative bg-gradient-to-br from-white to-gray-50 py-24 px-6 sm:px-10 overflow-hidden" id="waitlist">
+    
+    <!-- Floating blobs -->
+    <div class="absolute w-72 h-72 bg-indigo-100 rounded-full top-[-100px] left-[-100px] blur-3xl opacity-40 animate-float z-0"></div>
+    <div class="absolute w-40 h-40 bg-purple-200 rounded-full bottom-[-60px] right-[-40px] blur-2xl opacity-40 animate-float z-0"></div>
+
+    <!-- Main Content -->
+    <div class="max-w-3xl mx-auto text-center relative z-10" data-aos="zoom-in">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+        Join the Waitlist ✨  
+        <span class="block text-indigo-600 mt-2">Be the First to Launch with Us</span>
+      </h2>
+      <p class="text-lg text-gray-600 mb-10">
+        We’re cooking something powerful. Drop your email and you’ll get early access, updates, and secret launch goodies.
+      </p>
+
+      <!-- Waitlist Form -->
+      <form action="https://formsubmit.co/dhanegavesamir0@gmail.com" method="POST" class="flex flex-col sm:flex-row items-center gap-4 justify-center max-w-xl mx-auto">
+        <!-- FormSubmit Settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="🔥 New Waitlist Signup from SkillStack">
+
+        <!-- Email Input -->
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Enter your email"
+          class="w-full sm:w-auto flex-1 px-5 py-3 text-base rounded-full border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-500 transition-all duration-200"
+        />
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md"
+        >
+          🚀 Notify Me
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <input type="hidden" name="_autoresponse" value="Thanks for joining SkillStack! You'll be the first to know when we launch. 🚀" />
+
+  <!-- AOS Init -->
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+  </script>
+</body>
+</html>
